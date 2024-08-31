@@ -8,7 +8,8 @@
 ## Project Tasks
 ### Task 1: Basic Docker Commands
 - Docker Installation and Setup:
-- Install Docker on your local machine or use a cloud-based instance with Docker pre-installed.
+- Install Docker on your local machine or use a cloud-based instance with Docker
+  pre-installed.
 - Verify the Docker installation by running the docker --version command.
 
 #### Hello World Container:
@@ -21,7 +22,8 @@
 - List all running containers.
 - Stop the nginx container.
 - Remove the nginx container.
-- Run the nginx container again and map port 8080 on the host to port 80 in the container.
+- Run the nginx container again and map port 8080 on the host to port 80 in the 
+  container.
 - Inspect the nginx container to view its details.
 - Rename the running nginx container to my_nginx.
 - View the logs of the my_nginx container.
@@ -33,10 +35,13 @@
 ```python
 # app.py
 from flask import Flask
+
 app = Flask(__name__)
+
 @app.route('/')
 def hello_world():
     return 'Hello, World!'
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 
@@ -63,21 +68,27 @@ if __name__ == '__main__':
 #### Data Persistence with Volumes
 - Modify the Dockerfile to include a volume for the `/data` directory.
 - Rebuild the flask-app image.
-- Run a container from the new flask-app image, mounting a local directory `/path/to/local/data` to the /data directory in the container.
-- Verify that files created in the /data directory inside the container are persisted to the local directory on the host.
+- Run a container from the new flask-app image, mounting a local directory 
+  `/path/to/local/data` to the /data directory in the container.
+- Verify that files created in the /data directory inside the container are 
+  persisted to the local directory on the host.
 
 #### Environment Variables
-- Modified the Flask application to read a message from an environment variable is as below
+- Modified the Flask application to read a message from an environment variable 
+  is as below:
 ```python
 import os
 from flask import Flask
+
 app = Flask(__name__)
+
 @app.route('/')
 def hello_world():
-message = os.getenv('MESSAGE', 'Hello, World!')
-return message
+    message = os.getenv('MESSAGE', 'Hello, World!')
+    return message
+
 if __name__ == '__main__':
-app.run(host='0.0.0.0', port=5000)
+    app.run(host='0.0.0.0', port=5000)
 ```
 - Update the Dockerfile to include the ENV instruction for the MESSAGE environment
   variable.
