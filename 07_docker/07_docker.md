@@ -84,6 +84,7 @@ if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 
 ```
+
 #### Building and Running the Custom Image:
 - Build the Docker image from the Dockerfile with the tag flask-app.
 - Run a container from the flask-app image in detached mode, mapping port 5000 on the
