@@ -12,9 +12,15 @@
   pre-installed.
 - Verify the Docker installation by running the docker --version command.
 
-#### Hello World Container:
+#### Hello World Container
   - Run the official Docker "hello-world" container and verify its output.
+```bash
+docker run hello-world
+```
   - Remove the "hello-world" container after verification.
+```bash
+docker container rm <hello-world-container-id>
+```
 
 #### Basic Container Management:
 - Pull the nginx image from Docker Hub.
