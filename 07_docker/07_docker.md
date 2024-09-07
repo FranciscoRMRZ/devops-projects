@@ -35,6 +35,38 @@ docker container rm <hello-world-container-id>
 - View the logs of the my_nginx container.
 - Restart the my_nginx container.
 
+```bash
+# Pull the nginx image from Docker Hub
+docker pull nginx
+
+# Run an nginx container in detached mode
+docker run -d nginx
+
+# List all running containers
+docker ps
+
+# Stop the nginx container
+docker stop nginx_container_id
+
+# Remove the nginx container
+docker rm nginx_container_id
+
+# Map port 8080 on the host to port 80 in the container
+docker run -d -p 8080:80 nginx
+
+# Inspect the nginx container to view its details.
+docker inspect nginx_container_id
+
+# Rename the running nginx container to my_nginx
+docker rename nginx_container_id my_nginx
+
+# View the logs of the my_nginx container
+docker logs my_nginx
+
+# Restart the my_nginx container
+docker restart my_nginx
+```
+
 ### Task 2: Dockerfile and Custom Image Creation
 - Creating a Dockerfile to dockerize following python flask application
 - Flask application:
