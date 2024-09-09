@@ -108,6 +108,18 @@ docker container rm my_app_id
 - Push the tagged image to your Docker Hub repository.
 - Provide the link to the Docker Hub repository containing the flask-app image.
 
+```bash
+# Tag the flask-app image with your Docker Hub username and a version tag (e.g.,v1).
+docker tag my_flask_app franciscormrz/my_flask_app
+
+# Push the tagged image to your Docker Hub repository.
+docker push franciscormrz/my_flask_app
+
+# Provide the link to the Docker Hub repository containing the flask-app image.
+https://hub.docker.com/repository/docker/franciscormrz/my_flask_app/
+
+```
+
 #### Managing Images:
 - List all Docker images on your local machine.
 - Remove the local flask-app image.
