@@ -86,12 +86,21 @@ if __name__ == '__main__':
 ```
 
 #### Building and Running the Custom Image:
-- Build the Docker image from the Dockerfile with the tag flask-app.
+- Build the [Docker image](./flask_app/Dockerfile) from the Dockerfile with the tag flask-app.
 - Run a container from the flask-app image in detached mode, mapping port 5000 on the
   host to port 5000 in the container.
 - Verify that the application is accessible at http://localhost:5000 or the appropriate IP if
   using a cloud-based instance.
 - Stop and remove the container.
+
+```bash
+# Run a container from the flask-app image in detached mode, mapping port 5000 on the host to port 5000 in the container.
+docker run -dp 5000:5000  my_flask_app
+
+# Stop and remove the container
+docker stop my_app_id
+docker container rm my_app_id
+```
 
 ### Task 3: Image Management and Docker Hub
 #### Image Tagging and Pushing to Docker Hub:
