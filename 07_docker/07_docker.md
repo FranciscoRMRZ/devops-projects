@@ -124,6 +124,13 @@ https://hub.docker.com/repository/docker/franciscormrz/my_flask_app/
 - List all Docker images on your local machine.
 - Remove the local flask-app image.
 
+```bash
+# List all Docker images on your local machine.
+docker image ls
+# Remove the local flask-app image.
+docker image rm my_flask_app
+```
+
 ### Task 4: Intermediate Container Operations
 #### Data Persistence with Volumes
 - Modify the Dockerfile to include a volume for the `/data` directory.
