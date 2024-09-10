@@ -179,11 +179,10 @@ if __name__ == '__main__':
   reducing the final image size.
 
 #### Health Checks
-- Add a health check to the Dockerfile to ensure the container is running correctly.
-
+- Add a health check to the [Dockerfile](./flask_app/Dockerfile) to ensure the container is running correctly.
+  
 ```bash
-HEALTHCHECK --interval=30s --timeout=10s --retries=3 CMD curl -f
-http://localhost:5000/ || exit 1
+HEALTHCHECK --interval=30s --timeout=10s --retries=3 CMD ["curl", "-f", "http://localhost:5000/", "||", "exit", "1"]
 ```
 - Rebuild the flask-app image and run a container from the updated image.
 - Verify the health status of the running container.
