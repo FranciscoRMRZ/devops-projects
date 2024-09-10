@@ -164,8 +164,8 @@ def hello_world():
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
 ```
-- Update the Dockerfile to include the ENV instruction for the MESSAGE environment
-  variable.
+- Update the [Dockerfile](./flask_app/Dockerfile) to include the ENV instruction 
+  for the MESSAGE environment variable.
 
 #### Rebuild the flask-app image.
 - Run a container from the updated flask-app image, passing a custom message as an

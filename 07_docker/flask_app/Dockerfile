@@ -1,5 +1,7 @@
 FROM python:3.12.5-alpine3.20
 
+ENV MESSAGE="Hello from Docker!"
+
 WORKDIR /flask-app
 
 COPY ./src/requirements.txt ./requirements.txt
