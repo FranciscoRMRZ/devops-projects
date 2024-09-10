@@ -175,10 +175,12 @@ if __name__ == '__main__':
 
 ### Task 5: Advanced Docker Concepts
 #### Multi-Stage Builds
-- Optimize the Dockerfile to use multi-stage builds for reducing the final image size.
+- Optimize the [Dockerfile](./flask_app/Dockerfile.multi-stage) to use multi-stage builds for
+  reducing the final image size.
 
 #### Health Checks
 - Add a health check to the Dockerfile to ensure the container is running correctly.
+
 ```bash
 HEALTHCHECK --interval=30s --timeout=10s --retries=3 CMD curl -f
 http://localhost:5000/ || exit 1
