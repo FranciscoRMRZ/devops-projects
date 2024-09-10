@@ -140,6 +140,13 @@ docker image rm my_flask_app
 - Verify that files created in the /data directory inside the container are 
   persisted to the local directory on the host.
 
+```bash
+# Create a volume
+docker volume create my_flask_volume
+# Run a container from the flask-app image, mounting a local directory 
+docker run -dp 5000:5000 -v my_flask_volume:/flask_app/data my_flask_app
+```
+
 #### Environment Variables
 - Modified the Flask application to read a message from an environment variable 
   is as below:
